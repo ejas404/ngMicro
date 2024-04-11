@@ -1,1 +1,6 @@
-<p>form works!</p>
+<!-- template driven form -->
+
+<form #tempForm="ngForm"  (submit)="onSubmit(tempForm)">
+    <input ngModel type="text" name="field1" placeholder="enter something">
+    <button type="submit">submit</button>
+</form>
