@@ -1,6 +1,8 @@
 <!-- template driven form -->
 
 <form #tempForm="ngForm"  (submit)="onSubmit(tempForm)">
-    <input ngModel type="text" name="field1" placeholder="enter something">
+    <input ngModel [(ngModel)]="text" type="text" name="field1" placeholder="enter something">
+    <p>{{text}}</p>
     <button type="submit">submit</button>
 </form>
+<p>{{num}}</p>

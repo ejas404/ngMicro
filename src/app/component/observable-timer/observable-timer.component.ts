@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, TimeoutConfig } from 'rxjs';
 
 @Component({
   selector: 'app-observable-timer',
@@ -12,7 +12,7 @@ export class ObservableTimerComponent {
   time : number = 0;
   obs !: Observable<any> ;
   unsub !: Subscription;
-  intervalId !: number;
+  intervalId !: ReturnType<typeof setTimeout>;
   flag  = false;
 
   startTimer(){
